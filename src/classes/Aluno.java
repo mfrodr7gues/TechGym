@@ -11,10 +11,10 @@ public class Aluno extends Usuario {
     private int telefoneAluno;
 
     // Construtor
-    public Aluno (String nome, String sobrenome, String email, String senha, int idAluno, String cpfAluno,int dataNascimentoAluno, char sexoAluno, int telefoneAluno) {
+    public Aluno (String nome, String email, String senha, int idAluno, String cpfAluno,int dataNascimentoAluno, char sexoAluno, int telefoneAluno) {
         
         // Atributos herdados da classe mãe
-        super (nome, sobrenome, email, senha);
+        super (nome, email, senha);
 
         this.idAluno = idAluno;
         this.cpfAluno = cpfAluno;
