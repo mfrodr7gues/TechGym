@@ -4,15 +4,13 @@ package classes;
 public class Usuario {
     
     private String nome;
-    private String sobrenome;
     private String email;
     private String senha;
 
     // Construtor
-    public Usuario (String nome, String sobrenome, String email, String senha) {
+    public Usuario (String nome, String email, String senha) {
 
         this.nome = nome;
-        this.sobrenome = sobrenome;
         this.email = email;
         this.senha = senha;
     }

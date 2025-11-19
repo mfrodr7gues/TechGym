@@ -19,7 +19,7 @@ public class Matricula {
     this.statusMatricula = statusMatricula;
     this.aluno = aluno;
     this.plano = plano;
-    this.pagamento = pagamento;
+    this.tipoPagamento = tipoPagamento;
 }
 
 

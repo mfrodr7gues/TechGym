@@ -7,10 +7,10 @@ public class Instrutor extends Usuario {
     private int idInstrutor;
 
     // Construtor
-    public Instrutor (String nome, String sobrenome, String email, String senha, int idInstrutor) {
+    public Instrutor (String nome, String email, String senha, int idInstrutor) {
 
         // Atributos herdados da classe mãe
-        super (nome, sobrenome, email, senha);
+        super (nome, email, senha);
 
         this.idInstrutor = idInstrutor;
     }
