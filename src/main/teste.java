@@ -7,7 +7,7 @@ import classes.Usuario;
 class teste {
     public static void main (String[] args) {
         
-        Usuario PrimeiroUsuario = new Usuario ("Safira", "Cchi", "safira@gmail.com", "Safira123");
+        Usuario PrimeiroUsuario = new Usuario ("Safira", "safira@gmail.com", "Safira123");
         System.out.println ("Usuário criado: " + PrimeiroUsuario.getNome() + " " + PrimeiroUsuario.getSobrenome());
     }
 }

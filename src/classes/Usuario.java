@@ -24,14 +24,6 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome (String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
     public String getEmail() {
         return email;
     }
