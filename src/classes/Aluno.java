@@ -65,7 +65,7 @@ public class Aluno extends Usuario {
 
     // Métodos abstratos implementados da classe mãe
     @Override
-    public void realizarLogin(String email, String senha) {
+    public void realizarLogin (String email, String senha) {
 
         if (getEmail().equals(email) && getSenha().equals(senha)) {
             System.out.println ("Olá, " + getNome() + "! Login realizado com sucesso.");
