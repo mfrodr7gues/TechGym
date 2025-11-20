@@ -1,8 +1,9 @@
 package classes;
 
 // Classe mãe
-public class Usuario {
+public abstract class Usuario {
     
+    // Atributos
     private String nome;
     private String email;
     private String senha;
@@ -39,4 +40,27 @@ public class Usuario {
     public void setSenha (String senha) {
         this.senha = senha;
     }
+
+    // Métodos abstratos da classe mãe
+    public abstract void realizarLogin (String email, String senha);
+
+    public abstract void realizarLogout();
+
+    public abstract void cancelarMatricula();
+
+    public abstract void criarFichaDeTreino();
+
+    public abstract void editarFichaDeTreino();
+
+    public abstract void salvarFichaDeTreino();
+
+    public abstract void acessarFichaDeTreino();
+
+    public abstract void criarAvaliacaoFisica();
+
+    public abstract void editarAvaliacaoFisica();
+
+    public abstract void salvarAvaliacaoFisica();
+
+    public abstract void acessarAvaliacaoFisica();
 }
