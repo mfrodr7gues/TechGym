@@ -1,17 +1,20 @@
 package classes;
 
+import java.util.Date;
+import java.util.List;
+
 // Classe filha
 public class Aluno extends Usuario {
     
     // Atributos
     private int idAluno;
     private String cpfAluno;
-    private int dataNascimentoAluno;
+    private Date dataNascimentoAluno;
     private char sexoAluno;
     private int telefoneAluno;
 
     // Construtor
-    public Aluno (String nome, String email, String senha, int idAluno, String cpfAluno,int dataNascimentoAluno, char sexoAluno, int telefoneAluno) {
+    public Aluno (String nome, String email, String senha, int idAluno, String cpfAluno, Date dataNascimentoAluno, char sexoAluno, int telefoneAluno) {
         
         // Atributos herdados da classe mãe
         super (nome, email, senha);
@@ -36,15 +39,11 @@ public class Aluno extends Usuario {
         return cpfAluno;
     }
 
-    public void setCpfAluno (String cpfAluno) {
-        this.cpfAluno = cpfAluno;
-    }
-
-    public int getDataNascimentoAluno() {
+    public Date getDataNascimentoAluno() {
         return dataNascimentoAluno;
     }
 
-    public void setDataNascimentoAluno (int dataNascimentoAluno) {
+    public void setDataNascimentoAluno (Date dataNascimentoAluno) {
         this.dataNascimentoAluno = dataNascimentoAluno;
     }
 
@@ -62,5 +61,28 @@ public class Aluno extends Usuario {
 
     public void setTelefoneAluno (int telefoneAluno) {
         this.telefoneAluno = telefoneAluno;
+    }
+
+    // Métodos abstratos implementados da classe mãe
+    @Override
+    public void realizarLogin(String email, String senha) {
+
+        if (getEmail().equals(email) && getSenha().equals(senha)) {
+            System.out.println ("Olá, " + getNome() + "! Login realizado com sucesso.");
+        }
+        
+        else {
+            System.out.println ("Ops... Email ou senha incorretos! Tente novamente.");
+        }
+    }
+
+    @Override
+    public void realizarLogout() {
+        System.out.println ("O usuário " + getNome() + " realizou logout.");
+    }
+
+    @Override
+    public void cancelarMatricula() {
+        System.out.println ("O aluno " + getNome() + " cancelou a matrícula.");
     }
 }
