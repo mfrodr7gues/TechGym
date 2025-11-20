@@ -51,38 +51,16 @@ public class Instrutor extends Usuario {
         System.out.println("Acesso reativado para o aluno " + aluno.getNome());
     }
 
-    public void listarPerfis() {
-
-        System.out.println("Lista de alunos do instrutor " + getNome() + ":");
-        for (Aluno a : alunos) {
-            System.out.println("- " + a.getNome());
-        }
+    public void listarAlunos {
+        System.out.println("ai");
     }
 
-    public void cancelarMatricula (Aluno aluno) {
-        if (aluno == null) {
-            System.out.println ("Não há alunos matrículados.");
-            return;
-        }
-
-        if (!aluno.isMatriculado()) {
-            System.out.println ("O aluno " + aluno.getNome() + " já está com matrícula cancelada.");
-            return;
-        }
-
-        aluno.cancelarMatricula();
-
-        System.out.println ("Instrutor " + getNome() + " cancelou a matrícula do aluno " + aluno.getNome());
+    public void cancelarMatricula () {
+        System.out.println("Matrícula do aluno " + getNome() + " foi cancelada.");
     }
 
-    public void procurarPerfil(String nome) {
-        for (Aluno a : alunos) {
-            if (a.getNome().equalsIgnoreCase(nome)) {
-                System.out.println("Aluno encontrado: " + a.getNome());
-                return;
-            }
-        }
-        System.out.println("Aluno não encontrado.");
+    public void procurarAluno (String nome) {
+        System.out.println("Procurando aluno: " + getNome());
     }
 
     // Métodos abstratos implementados da classe mãe
