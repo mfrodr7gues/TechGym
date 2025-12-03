@@ -7,37 +7,37 @@ import java.util.Date;
 
 public class TechGymMain {
     public static void main(String[] args) {
-        System.out.println("=== SISTEMA TECHGYM INICIANDO ===\n");
+        System.out.println("SISTEMA TECHGYM : TESTE INICIANDO \n");
 
         // Criar planos
-        Plano planoBasico = new Plano(1, "Básico", "Acesso à musculação", 80.0, 1);
-        Plano planoPremium = new Plano(2, "Premium", "Acesso completo + aulas coletivas", 120.0, 1);
+        Plano planoBasico = new Plano(1, "Básico", "Acesso apenas à musculação", 80.0, 1);
+        Plano planoPremium = new Plano(2, "Premium", "Acesso completo", 120.0, 1);
 
         // Criar aluno
         Aluno aluno = new Aluno(
-            "Carlos Silva",
-            "carlos@email.com",
-            "senha123",
-            1001,
-            "123.456.789-00",
-            new Date(95, Calendar.JULY, 15) // 15/06/1995
+                "Otávio",
+                "loez@email.com",
+                "23022009",
+                1,
+                "000.000.000-00",
+                new Date(2025, Calendar.AUGUST, 17)
         );
 
         // Criar instrutor
         Instrutor instrutor = new Instrutor(
-            "Ana Souza",
-            "ana@techgym.com",
-            "instr123",
-            2001
+                "Rodrigo Santana",
+                "rodrigosantana@gmail.com",
+                "instrutorRodrigo1",
+                1
         );
 
         System.out.println("1. LOGIN:");
-        aluno.realizarLogin("carlos@email.com", "senha123");
-        instrutor.realizarLogin("ana@techgym.com", "instr123");
+        aluno.realizarLogin("loez@email.com", "23022009");
+        instrutor.realizarLogin("rodrigosantana@gmail.com", "instrutorRodrigo1");
 
         System.out.println("\n2. MATRÍCULA E PAGAMENTO:");
         aluno.realizarMatricula(planoPremium);
-        aluno.realizarPagamento(120.0, "Cartão de Crédito");
+        aluno.realizarPagamento(120.0, "Cartão de crédito");
 
         System.out.println("\n3. INSTRUTOR GERENCIANDO ALUNO:");
         instrutor.adicionarAluno(aluno);
@@ -45,7 +45,7 @@ public class TechGymMain {
         instrutor.visualizarAluno(aluno);
 
         System.out.println("\n4. FICHA DE TREINO:");
-        String[] exercicios = {"Supino Reto", "Agachamento Livre", "Remada Curvada", "Desenvolvimento"};
+        String[] exercicios = {"Supino reto", "Agachamento livre", "Remada curvada", "Desenvolvimento lateral"};
         String[] series = {"4x10", "3x8", "3x12", "4x10"};
         FichaTreino ficha = new FichaTreino(exercicios, series);
         aluno.getFichasTreino().add(ficha);
@@ -60,7 +60,6 @@ public class TechGymMain {
         aluno.realizarLogout();
         instrutor.realizarLogout();
 
-        System.out.println("\n=== SISTEMA TECHGYM FINALIZADO ===");
+        System.out.println("SISTEMA TECHGYM : TESTE FINALIZADO");
     }
 }
-
