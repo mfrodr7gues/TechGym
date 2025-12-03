@@ -2,9 +2,6 @@ package classes;
 
 import java.util.Date;
 
-// Essa classe tá bem bagunçada, tem que ajeitar!!!
-// Isso que eu vim fazer.
-
 public class Matricula {
 
     // Atributos
@@ -45,11 +42,8 @@ public class Matricula {
         System.out.println("Matrícula renovada: " + aluno.getNome());
     }
 
-    // Por que o realizar pagamento está aqui se não é um método da classe Matricula?
     public void realizarPagamento(double valor, String metodo) {
 
-        // Meu Deus, que bagunça é essa aqui em baixo?
-        // Era só alinhar os parâmetros do construtor com os atributos da classe Pagamento.
         this.pagamento = new Pagamento((int) randomizer, new Date(), valor, metodo, false, this);
         pagamento.registrarPagamento();
     }
