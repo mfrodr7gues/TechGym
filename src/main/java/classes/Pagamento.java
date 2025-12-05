@@ -10,16 +10,16 @@ public class Pagamento {
     private double valorPagamento;
     private String metodoPagamento;
     private boolean statusPagamento;
-    private Matricula matricula; // O que isso significa?
+    private Matricula matricula;
 
     // Construtor
     public Pagamento (int idPagamento, Date dataPagamento, double valorPagamento, String metodoPagamento, boolean statusPagamento, Matricula matricula) {
 
         this.idPagamento = idPagamento;
-        this.dataPagamento = new Date(); // O que isso significa?
+        this.dataPagamento = new Date(); 
         this.valorPagamento = valorPagamento;
         this.metodoPagamento = metodoPagamento;
-        this.statusPagamento = false; // Por que isso está como 'false'?
+        this.statusPagamento = false; 
         this.matricula = matricula;
     }
 
@@ -57,17 +57,16 @@ public class Pagamento {
         this.metodoPagamento = metodoPagamento;
     }
 
-    public boolean isStatusPagamento() { // Por que aqui se usa esse 'IS'?
+    public boolean isStatusPagamento() { 
         return statusPagamento;
     }
 
-    public Matricula getMatricula() { // Precisa de set?
+    public Matricula getMatricula() { 
         return matricula;
     }
 
     public void detalhesPagamento() {
 
-        // Será que tem como transformar isso tudo em um dicionário/objeto?
         System.out.println("DETALHES DE PAGAMENTO: \n");
         System.out.println("ID: " + idPagamento);
         System.out.println("Data: " + new Date());
@@ -79,12 +78,14 @@ public class Pagamento {
     public void registrarPagamento() {
 
         if (valorPagamento >= matricula.getPlano().getValorPlano()) {
+
             this.statusPagamento = true;
             matricula.setPaga(true);
             System.out.println("Pagamento registrado: R$ " + valorPagamento);
         }
 
         else {
+
             System.out.println("Ops... pagamento recusado! Valor insuficiente.");
         }
     }

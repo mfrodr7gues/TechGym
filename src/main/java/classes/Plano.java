@@ -74,8 +74,4 @@ public class Plano {
         System.out.println("Valor: R$ " + valorPlano + "/mês");
         System.out.println("Duração: " + duracaoMeses + " meses");
     }
-
-    // Cadê o método 'atualizarPlano'?
-
 }
-

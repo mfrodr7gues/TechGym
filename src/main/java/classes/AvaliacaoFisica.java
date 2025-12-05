@@ -14,8 +14,8 @@ public class AvaliacaoFisica {
     // Construtor
     public AvaliacaoFisica (int idAvaliacaoFisica, Date dataAvaliacaoFisica, double peso, double altura, double imc) {
 
-        this.idAvaliacaoFisica = (int) (Math.random() * 1000) + 2000; // ???
-        this.dataAvaliacaoFisica = new Date(); // ???
+        this.idAvaliacaoFisica = (int) (Math.random() * 1000) + 2000;
+        this.dataAvaliacaoFisica = new Date();
         this.peso = peso;
         this.altura = altura;
         this.imc = peso / (altura * altura);
@@ -90,4 +90,3 @@ public class AvaliacaoFisica {
         System.out.println("IMC: " + String.format("%.2f", imc)); // ???
     }
 }
-

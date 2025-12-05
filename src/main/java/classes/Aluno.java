@@ -23,35 +23,50 @@ public class Aluno extends Usuario {
     }
     
     // Acesso às privates usando getters e setters
+    public int getIdAluno() { 
+        return idAluno; 
+    }
+
+    public String getCpf() { 
+        return cpf; 
+    }
+
+    public Date getDataNascimento() { 
+        return dataNascimento; 
+    }
     
-    // Escrever aqui!
-    
-    // Getters
-    public int getIdAluno() { return idAluno; }
-    public String getCpf() { return cpf; }
-    public Date getDataNascimento() { return dataNascimento; }
-    public Matricula getMatricula() { return matricula; }
+    public Matricula getMatricula() { 
+        return matricula; 
+    }
     
     // Métodos abstratos implementados pela classe mãe
     @Override
-    public void realizarLogin(String email, String senha) {
+    public void realizarLogin (String email, String senha) {
+
         if (getEmail().equals(email) && getSenha().equals(senha)) {
-            setLogado(true);
+
+            setLogado(true); // Alterando o atributo com set
             System.out.println("Login realizado: " + getNome());
-        } else {
-            System.out.println("Login falhou");
+        }
+        
+        else {
+
+            System.out.println("Ops... Não foi possivel realizar login!");
         }
     }
 
     @Override
     public void realizarLogout() {
+
         setLogado(false);
         System.out.println("Logout: " + getNome());
     }
 
     @Override
     public void cancelarMatricula() {
+
         if (matricula != null) {
+
             matricula.cancelarMatricula();
             System.out.println("Matrícula cancelada: " + getNome());
         }
@@ -59,22 +74,26 @@ public class Aluno extends Usuario {
 
     // Métodos específicos da classe Aluno
     public void realizarMatricula (Plano plano) {
-        this.matricula = new Matricula(this, plano); // O que isso significa?
+
+        this.matricula = new Matricula(this, plano);
         matricula.realizarMatricula();
     }
     
     public void escolherPlano (Plano plano) {
+
         System.out.println("Plano escolhido: " + plano.getNomePlano());
     }
     
     public void realizarPagamento (double valor, String metodo) {
+
         if (matricula != null) {
+
             matricula.realizarPagamento(valor, metodo);
         }
         
         else {
+
             System.out.println("Matrícula não encontrada!");
         }
     }
-
 }
