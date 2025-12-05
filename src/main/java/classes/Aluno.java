@@ -23,14 +23,21 @@ public class Aluno extends Usuario {
     }
     
     // Acesso às privates usando getters e setters
+    public int getIdAluno() { 
+        return idAluno; 
+    }
+
+    public String getCpf() { 
+        return cpf; 
+    }
+
+    public Date getDataNascimento() { 
+        return dataNascimento; 
+    }
     
-    // Escrever aqui!
-    
-    // Getters
-    public int getIdAluno() { return idAluno; }
-    public String getCpf() { return cpf; }
-    public Date getDataNascimento() { return dataNascimento; }
-    public Matricula getMatricula() { return matricula; }
+    public Matricula getMatricula() { 
+        return matricula; 
+    }
     
     // Métodos abstratos implementados pela classe mãe
     @Override
@@ -38,7 +45,7 @@ public class Aluno extends Usuario {
 
         if (getEmail().equals(email) && getSenha().equals(senha)) {
 
-            setLogado(true);
+            setLogado(true); // Alterando o atributo com set
             System.out.println("Login realizado: " + getNome());
         }
         

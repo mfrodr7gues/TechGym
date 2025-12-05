@@ -7,11 +7,24 @@ import java.util.Date;
 
 public class TechGymMain {
     public static void main(String[] args) {
+
         System.out.println("SISTEMA TECHGYM : TESTE INICIANDO \n");
 
         // Criar planos
-        Plano planoBasico = new Plano(1, "Básico", "Acesso apenas à musculação", 80.0, 1);
-        Plano planoPremium = new Plano(2, "Premium", "Acesso completo", 120.0, 1);
+        Plano planoBasico = new Plano(
+            1, 
+            "Básico", 
+            "Acesso apenas à musculação", 
+            80.0, 
+            1
+        );
+        Plano planoPremium = new Plano(
+            2, 
+            "Premium", 
+            "Acesso completo", 
+            120.0, 
+            1
+        );
 
         // Criar aluno
         Aluno aluno = new Aluno(
