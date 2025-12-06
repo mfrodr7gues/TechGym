@@ -12,7 +12,7 @@ public class AvaliacaoFisica {
     private double imc;
 
     // Construtor
-    public AvaliacaoFisica (int idAvaliacaoFisica, Date dataAvaliacaoFisica, double peso, double altura, double imc) {
+    public AvaliacaoFisica (int idAvaliacaoFisica, Date dataAvaliacaoFisica, double peso, double altura) {
 
         this.idAvaliacaoFisica = (int) (Math.random() * 1000) + 2000;
         this.dataAvaliacaoFisica = new Date();
@@ -83,7 +83,6 @@ public class AvaliacaoFisica {
 
     public void acessarAvaliacaoFisica() {
 
-        System.out.println("AVALIAÇÃO FÍSICA: \n");
         System.out.println("Código: " + idAvaliacaoFisica);
         System.out.println("Peso: " + peso + "kg");
         System.out.println("Altura: " + altura + "m");

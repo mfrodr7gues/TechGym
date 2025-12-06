@@ -65,7 +65,7 @@ public class TechGymMain {
         ficha.acessarFichaTreino();
 
         System.out.println("\n5. AVALIAÇÃO FÍSICA:");
-        AvaliacaoFisica avaliacao = new AvaliacaoFisica(12, new Date(), 74.0, 1.80, 22.84);
+        AvaliacaoFisica avaliacao = new AvaliacaoFisica(12, new Date(), 74.0, 1.80);
         aluno.getAvaliacoes().add(avaliacao);
         avaliacao.acessarAvaliacaoFisica();
 

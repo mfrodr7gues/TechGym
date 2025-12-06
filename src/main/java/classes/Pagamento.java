@@ -19,7 +19,7 @@ public class Pagamento {
         this.dataPagamento = new Date(); 
         this.valorPagamento = valorPagamento;
         this.metodoPagamento = metodoPagamento;
-        this.statusPagamento = false; 
+        this.statusPagamento = false;
         this.matricula = matricula;
     }
 
@@ -97,3 +97,4 @@ public class Pagamento {
 
 }
 
+// rotina de pagamento relacionamento data de vencimento com data de pagamento ideia de lyrane !!!
